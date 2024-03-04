@@ -1,5 +1,3 @@
-// Register.js
-
 import React, { useState } from 'react';
 import axios from 'axios';
 import { ToastContainer,toast } from 'react-toastify';
@@ -40,7 +38,7 @@ const Register = () => {
         if (!isEmailValid) {
           toast.error('Please enter a valid email address', {
             style: {
-            maxWidth: '300px', // Adjust the max-width as needed
+            maxWidth: '300px', 
             wordWrap: 'break-word',
             overflowWrap: 'break-word',
           },
@@ -58,13 +56,13 @@ const Register = () => {
             formDataWithFile.append('gender', formData.gender);
     
             const response = await axios.post('http://localhost:5000/register', formDataWithFile);
-            console.log(response); // Log the entire response object
+            console.log(response); 
             toast.success(response.data.message);
 
             navigate('/login')
 
         } catch (error) {
-            console.error(error); // Log the error for further investigation
+            console.error(error); 
             toast.error(error.response?.data?.error || 'An error occurred');
         }
     };
@@ -103,10 +101,7 @@ const Register = () => {
           Already have an account? <Link to="/login">Login here</Link>
         </p>
   
-        {/* ToastContainer for displaying notifications */}
         <ToastContainer position="top-right" autoClose={5000}/>
-
-     {/*   <ParticleBackground/> */}
       </div>
     </div>
     );

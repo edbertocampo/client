@@ -1,5 +1,3 @@
-// Profile.js
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { toast } from 'react-toastify';
@@ -24,7 +22,6 @@ const Profile = () => {
     gender: '',
   });
 
-  // Declare modalIsOpen state variable
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [needsMultipart, setNeedsMultipart] = useState(false);
   const [editing, setEditing] = useState(false);
@@ -45,10 +42,10 @@ const Profile = () => {
         console.log('Token:', token);
         
 
-                // Check if the token is present
+        
         if (!token) {
             console.log('Token not found. Logging out...');
-            // Perform logout actions (clear token, redirect, etc.)
+          
             localStorage.removeItem('token');
             navigate('/login');
             return;
@@ -130,7 +127,7 @@ const Profile = () => {
       });
       toast.success(response.data.message);
       setUser(response.data.user);
-      closeModal(); // Close the modal after successful update
+      closeModal(); 
     } catch (error) {
       toast.error(error.response.data.error);
     }
@@ -151,17 +148,13 @@ const Profile = () => {
   };
 
   const handleLogout = () => {
-    // Show a confirmation dialog
+
     const confirmLogout = window.confirm('Are you sure you want to log out?');
   
     if (confirmLogout) {
-      // Clear the authentication token
+     
       localStorage.removeItem('token');
       
-      // Other logout logic (e.g., redirecting to the login page)
-      // ...
-  
-      // Navigate to the login page
       navigate('/login');
     }
   };
@@ -174,10 +167,10 @@ const Profile = () => {
             const token = localStorage.getItem('token');
             console.log('Token:', token);
 
-            // Check if the token is present
+
             if (!token) {
                 console.log('Token not found. Logging out...');
-                // Perform logout actions (clear token, redirect, etc.)
+
                 localStorage.removeItem('token');
                 navigate('/login');
                 return;
@@ -189,7 +182,7 @@ const Profile = () => {
 
             if (response.status === 200) {
                 console.log('Account deleted successfully');
-                // Perform logout actions (clear token, redirect, etc.)
+
                 toast.success('Account deleted successfully')
                 localStorage.removeItem('token');
                 navigate('/login');
@@ -199,10 +192,10 @@ const Profile = () => {
         } catch (error) {
             console.error(error.response.data.error);
 
-            // Check if the error indicates token expiration
+  
             if (error.response && error.response.status === 401) {
                 console.log('Token expired. Logging out...');
-                // Perform logout actions (clear token, redirect, etc.)
+    
                 localStorage.removeItem('token');
                 navigate('/login');
             }
@@ -245,7 +238,7 @@ const Profile = () => {
       </div>
       </div>
 
-      {/* Edit Modal */}
+
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
@@ -277,7 +270,7 @@ const Profile = () => {
             <option value="female">Female</option>
             <option value="preferNotToSay">Prefer not to say</option>
           </select>
-          {/* Save and Cancel buttons in the edit modal */}
+
           <div className='modal_button'>
           <button type='submit'>Save</button>
           <button onClick={closeModal}>Cancel</button>

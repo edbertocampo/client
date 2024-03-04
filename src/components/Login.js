@@ -1,5 +1,3 @@
-// Login.js
-
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
@@ -34,10 +32,10 @@ const Login = () => {
                 closeOnClick: false, 
               });
 
-            // Perform any necessary actions upon successful login
+
             navigate('/profile'); 
         } catch (error) {
-            //console.error(error);
+
             toast.error('Invalid username or password', {
                 position: 'top-right',
                 autoClose: 2000,
@@ -70,8 +68,6 @@ const Login = () => {
             <p className="register">
                 Don't have an account? <Link to="/register" className="register_link">Register here</Link>
             </p>
-
-            {/* ToastContainer for displaying notifications */}
             <ToastContainer position="top-right" autoClose={5000} />
         </div>
     </div>

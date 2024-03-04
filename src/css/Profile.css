@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
-
 .profile-container {
     font-family: 'DM Sans';
     max-width: 700px;
@@ -85,7 +84,6 @@
     background-color: #135e96;
   }
   
-  /* Edit Modal Styles */
   .ReactModal__Overlay {
     opacity: 0;
     transition: opacity 300ms ease-in-out;
@@ -114,7 +112,6 @@
 
   }
   
-  /* Edit Modal Input Styles */
   label {
     display: block;
     margin-bottom: 5px;

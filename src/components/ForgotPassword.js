@@ -13,11 +13,11 @@ const ForgotPassword = () => {
     e.preventDefault();
 
     try {
-      // Send a request to the server to initiate password reset
+
       const response = await axios.post('http://localhost:5000/forgot-password', { email });
 
       toast.success(response.data.message);
-      // Navigate to the reset password page
+
       navigate(`/reset-password?email=${email}`);
     } catch (error) {
       console.error(error.response?.data?.error || 'Failed to initiate password reset. Please try again.');
