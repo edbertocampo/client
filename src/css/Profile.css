@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+.profile-container {
+    font-family: 'DM Sans';
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    flex-direction: column;
+    display: flex;
+    background: linear-gradient(-45deg, #003973, #E5E5BE, #00416A);
+    background-size: 400% 400%;
+    animation: gradientAnimation 7s ease  infinite;  
+    animation-direction: alternate-reverse;
+  }
+
+  .background{
+    background-color: #292E49;
+    background-size: 400% 400%;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-info img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .profile {
+    font-size: 24px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  
+  .profile-info p {
+    font-size: 14px;
+  }
+  
+  .btn-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .btn1{
+    order: 1;
+    margin-left: 2%;
+  }
+  .btn2{
+    order: 2;
+    
+    margin-left: 30%;
+  }
+
+  button {
+    background-color: #1877f2;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  button:hover {
+    background-color: #135e96;
+  }
+  
+  /* Edit Modal Styles */
+  .ReactModal__Overlay {
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+  }
+  
+  .ReactModal__Overlay--after-open {
+    opacity: 1;
+  }
+  
+  .ReactModal__Overlay--before-close {
+    opacity: 0;
+  }
+  
+  .ReactModal__Content {
+    display: block;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50%;
+    width: 40%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+
+  }
+  
+  /* Edit Modal Input Styles */
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 400;
+    font-family: 'DM Sans';
+  }
+.edit_profile{
+  font-size: 24px;
+  margin-bottom: 5px;
+  text-align: center;
+  font-family: 'DM Sans';
+}
+
+  input,
+  select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  button[type="submit"] {
+    background-color: #4caf50;
+    color: #fff;
+  }
+
+  .edit,
+  .logout,
+  .delete{
+    margin-right: 5px;
+  }
+
+  .modal_button {
+    margin-top: 50px;
+    margin-left: 35%;
+    margin-right: 35%;
+    width: 250px;
+  }
+
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  

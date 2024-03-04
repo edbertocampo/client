@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+.register-container {
+  font-family: 'DM Sans';
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  background: linear-gradient(-45deg, #003973, #E5E5BE, #00416A);
+  background-size: 400% 400%;
+  animation: gradientAnimation 7s ease  infinite;  
+  animation-direction: alternate-reverse;
+  
+
+}
+
+.logo{
+  height: 50px;
+  width: 50px;
+  margin-left: 175px;
+  margin-right: 175px;
+  margin-bottom: 3px;
+}
+
+.background{
+  background-color: #292E49;
+  background-size: 400% 400%;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+.register-container h2 {
+  text-align: center;
+  color: #333;
+  margin-top: 3px;
+}
+
+.register-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-container label {
+  margin-bottom: 8px;
+  font-weight: 400;
+
+}
+
+.register-container input {
+  padding: 8px;
+  margin-bottom: 12px;
+}
+
+.register-container button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 70px;
+  margin-right: 70px;
+  width: 250px;
+}
+
+.register-container button:hover {
+  background-color: #0056b3;
+}
+
+.register-container p {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.register-container a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-container a:hover {
+  text-decoration: underline;
+}
+
+
