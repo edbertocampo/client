@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+# CRUD Website with User Authentication
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A CRUD (Create, Read, Update, Delete) website that incorporates user login functionality using React. Users can register, log in, and view user information securely.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Overview](#overview)
+- [Features](#features)
+- [Requirements](#requirements)
+- [Technologies Used](#technologies-used)
+- [Setup and Installation](#setup-and-installation)
+- [User Registration](#user-registration)
+- [User Login](#user-login)
+- [View & Update User Information](#view-&-update-user-information)
+- [Forgot Password & Reset Password](#forgot-password-&-reset-password)
+- [Delete Account](#delete-account)
+- [Video Demonstration](#video-demonstration)
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Create a CRUD (Create, Read, Update, Delete) website that incorporates user login functionality using React.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+- User registration and login
+- View and update user information
+- Secure authentication for user access
+- CRUD functionality for managing user data
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Requirements
 
-### `npm run build`
+To run this project, ensure you have the following:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [Node.js](https://nodejs.org/) installed
+- [MongoDB](https://www.mongodb.com/) for database storage
+- [React](https://reactjs.org/) for the frontend
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technologies Used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Frontend**: React.js
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB
+- **Authentication**: JWT (JSON Web Tokens)
+- **Styling**: CSS
+- **API Requests**: Axios
 
-### `npm run eject`
+## Setup and Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Clone this repository: `git clone https://github.com/your-username/your-repo.git`
+2. Install dependencies: `npm install`
+3. Configure MongoDB: Update connection details in the `server.js` file.
+4. Start the server: `cd backend && node server.js`
+5. Start the React app: `cd client && npm start`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## User Registration
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Navigate to the registration page.
+2. Fill out the registration form with your details.
+3. Click the "Register" button.
+4. Upon successful login, you will be redirected to the login page.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![](https://github.com/edbertocampo/crud-mern-trade-test/blob/master/register.gif)
 
-## Learn More
+## User Login
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Go to the login page.
+2. Enter your registered email and password.
+3. Click the "Login" button.
+4. Upon successful login, you will be redirected to the user profile.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![](https://github.com/edbertocampo/crud-mern-trade-test/blob/master/login.gif)
 
-### Code Splitting
+## View & Update User Information
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. After login, you'll land on the user dashboard.
+2. View your profile information, including username, email, and other details.
+3. Find the "Edit Profile" section on the user dashboard.
+4. Modify the desired fields.
+5. Click the "Save Changes" button.
+6. You will receive a success message upon successful update.
 
-### Analyzing the Bundle Size
+![](https://github.com/edbertocampo/crud-mern-trade-test/blob/master/view%26update.gif)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Forgot Password & Reset Password
 
-### Making a Progressive Web App
+1. On the login page you will a link for forgot password.
+2. Put your email address and wait until the link for reset password shows up.
+3. Input your new password and click the "Reset Password" button
+4. Upon successfully resetting the password, you will be redirected to the login page.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+![](https://github.com/edbertocampo/crud-mern-trade-test/blob/master/reset.gif)
 
-### Advanced Configuration
+## Delete Account
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. On the profile page there is a link for Delete Account.
+2. Click the "Delete Account" button if you want to delete your user account (Note: This is irreversible)
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Video Demonstration
+[![Watch the Video]](https://drive.google.com/file/d/1rBkbUcGf4KOm-VuxmV75155uRyD51Z_k/view?usp=sharing)
